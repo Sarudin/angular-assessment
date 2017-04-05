@@ -5,7 +5,12 @@
 </section>
 <div class="product-grid__item   grid__item one-half large--one-third" >
 
-    <!--Repeat over your data and display it below -->
+    <div ng-repeat="product in products">
+      <div ui-sref="details({ id: product.id })">{{product.title}}</div> <br>
+      {{product.desc}} <br>
+      {{product.price | currency}} <br>
+      <hr>
+    </div>
 
-    
+
 </div>
